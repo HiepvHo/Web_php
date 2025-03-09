@@ -1,4 +1,57 @@
+# Enable rewrite engine
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteBase /project1/
+
+# Allow access to existing files and directories
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Route all other requests through index.php
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PHP configuration
+php_flag display_errors on
+php_value error_reporting E_ALL
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+
+# Default character set
+AddDefaultCharset UTF-8
+
+# Handle image files
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Set proper MIME types
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/gif .gif
+
+# Enable CORS for images
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Cache control for images
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+</IfModule>
+
+# Compression for images
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE image/jpeg
+    AddOutputFilterByType DEFLATE image/png
+    AddOutputFilterByType DEFLATE image/gif
+</IfModule>
