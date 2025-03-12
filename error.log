@@ -8411,3 +8411,141 @@
 (
 )
 
+[12-Mar-2025 01:01:19 UTC] URL parts: Array
+(
+    [0] => 
+)
+
+[12-Mar-2025 01:01:19 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:01:19 UTC] Attempting database connection with:
+[12-Mar-2025 01:01:19 UTC] Host: localhost
+[12-Mar-2025 01:01:19 UTC] Database: my_store
+[12-Mar-2025 01:01:19 UTC] Username: root
+[12-Mar-2025 01:01:19 UTC] Product count: 5
+[12-Mar-2025 01:01:19 UTC] Category count: 4
+[12-Mar-2025 01:01:19 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:01:19 UTC] Database connection successful
+[12-Mar-2025 01:01:19 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:01:23 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:01:23 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:01:23 UTC] Attempting database connection with:
+[12-Mar-2025 01:01:23 UTC] Host: localhost
+[12-Mar-2025 01:01:23 UTC] Database: my_store
+[12-Mar-2025 01:01:23 UTC] Username: root
+[12-Mar-2025 01:01:23 UTC] Product count: 5
+[12-Mar-2025 01:01:23 UTC] Category count: 4
+[12-Mar-2025 01:01:23 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:01:23 UTC] Database connection successful
+[12-Mar-2025 01:01:23 UTC] Application error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'my_store.cart' doesn't exist
+[12-Mar-2025 01:01:45 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:01:45 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:01:45 UTC] Attempting database connection with:
+[12-Mar-2025 01:01:45 UTC] Host: localhost
+[12-Mar-2025 01:01:45 UTC] Database: my_store
+[12-Mar-2025 01:01:45 UTC] Username: root
+[12-Mar-2025 01:01:45 UTC] Product count: 5
+[12-Mar-2025 01:01:45 UTC] Category count: 4
+[12-Mar-2025 01:01:45 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:01:45 UTC] Database connection successful
+[12-Mar-2025 01:01:45 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:01:49 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:01:49 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:01:49 UTC] Attempting database connection with:
+[12-Mar-2025 01:01:49 UTC] Host: localhost
+[12-Mar-2025 01:01:49 UTC] Database: my_store
+[12-Mar-2025 01:01:49 UTC] Username: root
+[12-Mar-2025 01:01:49 UTC] Product count: 5
+[12-Mar-2025 01:01:49 UTC] Category count: 4
+[12-Mar-2025 01:01:49 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:01:49 UTC] Database connection successful
+[12-Mar-2025 01:01:49 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:02:05 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:02:05 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:02:05 UTC] Attempting database connection with:
+[12-Mar-2025 01:02:05 UTC] Host: localhost
+[12-Mar-2025 01:02:05 UTC] Database: my_store
+[12-Mar-2025 01:02:05 UTC] Username: root
+[12-Mar-2025 01:02:05 UTC] Product count: 5
+[12-Mar-2025 01:02:05 UTC] Category count: 4
+[12-Mar-2025 01:02:05 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:02:05 UTC] Database connection successful
+[12-Mar-2025 01:02:05 UTC] Application error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'my_store.cart' doesn't exist

@@ -22,6 +22,8 @@ try {
     // Include model and controller base classes
     require_once 'app/models/CategoryModel.php';
     require_once 'app/models/Productmodel.php';
+    require_once 'app/models/CartModel.php';
+    require_once 'app/models/OrderModel.php';
 
     // Get URL from GET parameter
     $url = $_GET['url'] ?? '';

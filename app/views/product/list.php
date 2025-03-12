@@ -11,9 +11,21 @@
 <body>
     <div class="container">
         <!-- Header Section -->
-        <div class="page-header fade-in">
-            <h1><i class="fas fa-box-open me-3"></i>Quản lý sản phẩm</h1>
-            <p class="text-muted">Quản lý danh sách sản phẩm của bạn</p>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="page-header fade-in">
+                <h1><i class="fas fa-box-open me-3"></i>Sản phẩm</h1>
+                <p class="text-muted">Danh sách sản phẩm</p>
+            </div>
+            <div>
+                <a href="/project1/Cart/viewCart" class="btn btn-outline-primary position-relative">
+                    <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    <?php if (isset($_SESSION['cart_count']) && $_SESSION['cart_count'] > 0): ?>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <?php echo $_SESSION['cart_count']; ?>
+                        </span>
+                    <?php endif; ?>
+                </a>
+            </div>
         </div>
 
         <!-- Action Buttons -->
@@ -67,15 +79,33 @@
                             <h5 class="card-title"><?php echo htmlspecialchars($product->name); ?></h5>
                             <p class="card-text"><?php echo htmlspecialchars($product->description); ?></p>
                             
-                            <div class="d-flex justify-content-between mt-3">
-                                <button onclick="window.location.href='/project1/Product/edit/<?php echo $product->id; ?>'" 
-                                        class="btn btn-warning">
-                                    <i class="fas fa-edit me-1"></i>Sửa
-                                </button>
-                                <button onclick="confirmDelete(<?php echo $product->id; ?>)" 
-                                        class="btn btn-danger">
-                                    <i class="fas fa-trash-alt me-1"></i>Xóa
-                                </button>
+                            <div class="mt-3">
+                                <form action="/project1/Cart/addToCart/<?php echo $product->id; ?>"
+                                      method="post"
+                                      class="d-flex gap-2 mb-2">
+                                    <div class="input-group">
+                                        <input type="number"
+                                               name="quantity"
+                                               value="1"
+                                               min="1"
+                                               class="form-control"
+                                               style="width: 80px">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-cart-plus me-1"></i>Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <div class="d-flex justify-content-between">
+                                    <button onclick="window.location.href='/project1/Product/edit/<?php echo $product->id; ?>'"
+                                            class="btn btn-warning">
+                                        <i class="fas fa-edit me-1"></i>Sửa
+                                    </button>
+                                    <button onclick="confirmDelete(<?php echo $product->id; ?>)"
+                                            class="btn btn-danger">
+                                        <i class="fas fa-trash-alt me-1"></i>Xóa
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
