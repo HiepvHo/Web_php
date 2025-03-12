@@ -3,15 +3,36 @@
 <div class="container mt-4">
     <h2>Thanh toán</h2>
 
-    <?php if (!empty($errors)): ?>
+    <?php if (SessionHelper::hasFlash('error')): ?>
         <div class="alert alert-danger">
-            <ul class="mb-0">
-                <?php foreach ($errors as $error): ?>
-                    <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </ul>
+            <i class="fas fa-exclamation-circle me-2"></i>
+            <?php echo SessionHelper::getFlash('error'); ?>
         </div>
     <?php endif; ?>
+
+    <!-- Checkout Progress -->
+    <div class="checkout-progress mb-4">
+        <div class="row text-center">
+            <div class="col-4">
+                <div class="step completed">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Giỏ hàng</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="step active">
+                    <i class="fas fa-address-card"></i>
+                    <span>Thông tin</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="step">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Hoàn tất</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php if (empty($cartItems)): ?>
         <div class="alert alert-info">
@@ -23,26 +44,34 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Thông tin đặt hàng</h5>
-                        <form action="/project1/Cart/checkout" method="post">
-                            <div class="form-group">
-                                <label for="customer_name">Họ và tên</label>
-                                <input type="text" class="form-control <?php echo isset($errors['customer_name']) ? 'is-invalid' : ''; ?>" 
-                                       id="customer_name" name="customer_name" 
-                                       value="<?php echo htmlspecialchars($_POST['customer_name'] ?? ''); ?>" required>
-                                <?php if (isset($errors['customer_name'])): ?>
-                                    <div class="invalid-feedback"><?php echo $errors['customer_name']; ?></div>
-                                <?php endif; ?>
-                            </div>
+                        <h5 class="card-title mb-4">
+                           <i class="fas fa-user-circle me-2"></i>Thông tin đặt hàng
+                       </h5>
+                       <form action="/project1/Cart/checkout" method="post" class="needs-validation" novalidate id="checkoutForm">
+                           <div class="form-group mb-3">
+                               <label for="customer_name" class="form-label">
+                                   <i class="fas fa-user me-2"></i>Họ và tên
+                               </label>
+                               <input type="text" class="form-control <?php echo isset($errors['customer_name']) ? 'is-invalid' : ''; ?>"
+                                      id="customer_name" name="customer_name"
+                                      value="<?php echo htmlspecialchars($_POST['customer_name'] ?? ''); ?>"
+                                      pattern=".{3,}" required>
+                               <div class="invalid-feedback">
+                                   <?php echo isset($errors['customer_name']) ? $errors['customer_name'] : 'Vui lòng nhập họ tên (ít nhất 3 ký tự)'; ?>
+                               </div>
+                           </div>
 
-                            <div class="form-group">
-                                <label for="customer_email">Email</label>
-                                <input type="email" class="form-control <?php echo isset($errors['customer_email']) ? 'is-invalid' : ''; ?>" 
-                                       id="customer_email" name="customer_email" 
-                                       value="<?php echo htmlspecialchars($_POST['customer_email'] ?? ''); ?>" required>
-                                <?php if (isset($errors['customer_email'])): ?>
-                                    <div class="invalid-feedback"><?php echo $errors['customer_email']; ?></div>
-                                <?php endif; ?>
+                            <div class="form-group mb-3">
+                                <label for="customer_email" class="form-label">
+                                    <i class="fas fa-envelope me-2"></i>Email
+                                </label>
+                                <input type="email" class="form-control <?php echo isset($errors['customer_email']) ? 'is-invalid' : ''; ?>"
+                                       id="customer_email" name="customer_email"
+                                       value="<?php echo htmlspecialchars($_POST['customer_email'] ?? ''); ?>"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                <div class="invalid-feedback">
+                                    <?php echo isset($errors['customer_email']) ? $errors['customer_email'] : 'Vui lòng nhập email hợp lệ'; ?>
+                                </div>
                             </div>
 
                             <div class="form-group">

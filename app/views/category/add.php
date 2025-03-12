@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm danh mục mới</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/project1/public/css/styles.css">
-</head>
-<body>
+<?php require_once 'app/views/header.php'; ?>
     <div class="container">
         <!-- Header -->
         <div class="header fade-in">
@@ -42,6 +32,16 @@
                             <?php endif; ?>
                         </div>
 
+                       <!-- System Error -->
+                       <?php if (isset($errors['system'])): ?>
+                           <div class="col-12">
+                               <div class="alert alert-danger">
+                                   <i class="fas fa-exclamation-circle me-2"></i>
+                                   <?php echo $errors['system']; ?>
+                               </div>
+                           </div>
+                       <?php endif; ?>
+
                         <!-- Description -->
                         <div class="col-12 mb-3">
                             <label for="description" class="form-label">
@@ -74,7 +74,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Form validation
         (function () {
@@ -102,5 +101,5 @@
             this.querySelector('i').style.transform = 'scale(1)';
         });
     </script>
-</body>
-</html>
+
+<?php require_once 'app/views/footer.php'; ?>

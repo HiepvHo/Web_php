@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý danh mục</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/project1/public/css/styles.css">
-</head>
-<body>
+<?php require_once 'app/views/header.php'; ?>
     <div class="container">
         <!-- Header -->
         <div class="header fade-in">
@@ -31,13 +21,16 @@
         </div>
 
         <!-- Flash Messages -->
-        <?php if (isset($_SESSION['flash_messages']) && !empty($_SESSION['flash_messages'])): ?>
-            <?php foreach ($_SESSION['flash_messages'] as $message): ?>
-                <div class="alert alert-<?php echo $message['type']; ?> fade-in">
-                    <?php echo $message['message']; ?>
-                </div>
-            <?php endforeach; ?>
-            <?php $_SESSION['flash_messages'] = []; ?>
+        <?php if (SessionHelper::hasFlash('success')): ?>
+            <div class="alert alert-success fade-in">
+                <?php echo SessionHelper::getFlash('success'); ?>
+            </div>
+        <?php endif; ?>
+        
+        <?php if (SessionHelper::hasFlash('error')): ?>
+            <div class="alert alert-danger fade-in">
+                <?php echo SessionHelper::getFlash('error'); ?>
+            </div>
         <?php endif; ?>
 
         <!-- Categories Grid -->
@@ -123,7 +116,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Delete confirmation
         let deleteId = null;
@@ -175,22 +167,6 @@
                     });
             }
         });
-
-        // Add scroll animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('slide-up');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.card').forEach(card => {
-            observer.observe(card);
-        });
     </script>
-</body>
-</html>
+
+<?php require_once 'app/views/footer.php'; ?>

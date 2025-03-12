@@ -77,7 +77,9 @@ class OrderModel {
                 LIMIT ? OFFSET ?";
         
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([$perPage, $offset]);
+        $stmt->bindValue(1, $perPage, PDO::PARAM_INT);
+        $stmt->bindValue(2, $offset, PDO::PARAM_INT);
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

@@ -2,6 +2,7 @@
 require_once 'app/models/CartModel.php';
 require_once 'app/models/ProductModel.php';
 require_once 'app/config/Database.php';
+require_once 'app/helpers/SessionHelper.php';
 
 class CartController {
     private $cartModel;
@@ -9,11 +10,8 @@ class CartController {
     private $db;
 
     public function __construct() {
-        session_start();
-        if (!isset($_SESSION['session_id'])) {
-            $_SESSION['session_id'] = session_id();
-        }
-
+        SessionHelper::init();
+        
         $database = new Database();
         $this->db = $database->getConnection();
         $this->cartModel = new CartModel($this->db);
@@ -26,11 +24,15 @@ class CartController {
     private function updateCartCount() {
         $cartId = $this->getOrCreateCartId();
         $cartItems = $this->cartModel->getCart($_SESSION['session_id']);
-        $_SESSION['cart_count'] = array_sum(array_column($cartItems, 'quantity'));
+        SessionHelper::updateCartCount(array_sum(array_column($cartItems, 'quantity')));
     }
 
     private function getOrCreateCartId() {
         return $this->cartModel->getCartId($_SESSION['session_id']);
+    }
+
+    private function setFlashMessage($type, $message) {
+        SessionHelper::setFlash($type, $message);
     }
 
     public function viewCart() {
@@ -43,7 +45,7 @@ class CartController {
 
     public function addToCart($productId) {
         if (!$productId) {
-            $_SESSION['error'] = 'Invalid product';
+            $this->setFlashMessage('error', 'Sản phẩm không hợp lệ');
             header('Location: ' . $_SERVER['HTTP_REFERER']);
             exit();
         }
@@ -58,9 +60,9 @@ class CartController {
 
             $this->cartModel->addItem($cartId, $productId, $quantity);
             $this->updateCartCount();
-            $_SESSION['success'] = 'Thêm vào giỏ hàng thành công';
+            $this->setFlashMessage('success', 'Thêm vào giỏ hàng thành công');
         } catch (Exception $e) {
-            $_SESSION['error'] = 'Failed to add product to cart';
+            $this->setFlashMessage('error', 'Không thể thêm sản phẩm vào giỏ hàng');
             error_log($e->getMessage());
         }
 
@@ -70,7 +72,7 @@ class CartController {
 
     public function updateQuantity() {
         if (!isset($_POST['cart_item_id']) || !isset($_POST['quantity'])) {
-            $_SESSION['error'] = 'Invalid request';
+            $this->setFlashMessage('error', 'Yêu cầu không hợp lệ');
             header('Location: /project1/Cart/viewCart');
             exit();
         }
@@ -159,11 +161,12 @@ class CartController {
 
                     // Clear the cart
                     $this->cartModel->clearCart($cartId);
+                    SessionHelper::clearCart();
 
                     $this->db->commit();
 
                     // Redirect to success page
-                    $_SESSION['success'] = 'Đặt hàng thành công! Mã đơn hàng của bạn là: ' . $orderId;
+                    $this->setFlashMessage('success', 'Đặt hàng thành công! Mã đơn hàng của bạn là: ' . $orderId);
                     header('Location: /project1/Cart/orderSuccess/' . $orderId);
                     exit();
 
@@ -184,6 +187,7 @@ class CartController {
         $order = $orderModel->getOrder($orderId);
         
         if (!$order) {
+            $this->setFlashMessage('error', 'Không tìm thấy đơn hàng');
             header('Location: /project1/Product/list');
             exit();
         }

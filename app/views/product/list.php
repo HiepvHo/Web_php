@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý sản phẩm</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/project1/public/css/styles.css">
-</head>
-<body>
+<?php require_once 'app/views/header.php'; ?>
     <div class="container">
         <!-- Header Section -->
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -133,7 +123,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Delete confirmation
         let productIdToDelete = null;
@@ -161,8 +150,8 @@
                 const description = product.querySelector('.card-text').textContent.toLowerCase();
                 const category = product.querySelector('.category-badge').textContent.toLowerCase();
                 
-                if (title.includes(searchTerm) || 
-                    description.includes(searchTerm) || 
+                if (title.includes(searchTerm) ||
+                    description.includes(searchTerm) ||
                     category.includes(searchTerm)) {
                     product.style.display = '';
                 } else {
@@ -170,22 +159,6 @@
                 }
             });
         });
-
-        // Animate elements on scroll
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (elementTop < windowHeight - 100) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        }
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
     </script>
-</body>
-</html>
+
+<?php require_once 'app/views/footer.php'; ?>

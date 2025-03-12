@@ -3,23 +3,43 @@
 <div class="container mt-4">
     <h2>Quản lý đơn hàng</h2>
 
-    <?php if (isset($_SESSION['error'])): ?>
+    <?php if (SessionHelper::hasFlash('error')): ?>
         <div class="alert alert-danger">
-            <?php 
-            echo $_SESSION['error'];
-            unset($_SESSION['error']);
-            ?>
+            <i class="fas fa-exclamation-circle me-2"></i>
+            <?php echo SessionHelper::getFlash('error'); ?>
         </div>
     <?php endif; ?>
 
-    <?php if (isset($_SESSION['success'])): ?>
+    <?php if (SessionHelper::hasFlash('success')): ?>
         <div class="alert alert-success">
-            <?php 
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            ?>
+            <i class="fas fa-check-circle me-2"></i>
+            <?php echo SessionHelper::getFlash('success'); ?>
         </div>
     <?php endif; ?>
+
+    <!-- Order Summary -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h5 class="mb-0"><?php echo $totalOrders; ?></h5>
+                    <small class="text-muted">Tổng số đơn hàng</small>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-0"><?php echo $page; ?>/<?php echo $totalPages; ?></h5>
+                    <small class="text-muted">Trang hiện tại</small>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-0"><?php echo count($orders); ?></h5>
+                    <small class="text-muted">Đơn hàng hiển thị</small>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-0"><?php echo ($page - 1) * 10 + 1; ?>-<?php echo min($page * 10, $totalOrders); ?></h5>
+                    <small class="text-muted">Hiển thị</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="card">
         <div class="card-body">
@@ -85,11 +105,52 @@
             <?php if ($totalPages > 1): ?>
                 <nav aria-label="Page navigation" class="mt-4">
                     <ul class="pagination justify-content-center">
-                        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                        <!-- Previous Button -->
+                        <li class="page-item <?php echo $page <= 1 ? 'disabled' : ''; ?>">
+                            <a class="page-link" href="?page=<?php echo $page - 1; ?>" <?php echo $page <= 1 ? 'tabindex="-1" aria-disabled="true"' : ''; ?>>
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+
+                        <!-- Page Numbers -->
+                        <?php
+                        $start = max(1, min($page - 2, $totalPages - 4));
+                        $end = min($totalPages, max(5, $page + 2));
+                        
+                        if ($start > 1): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">1</a>
+                            </li>
+                            <?php if ($start > 2): ?>
+                                <li class="page-item disabled">
+                                    <span class="page-link">...</span>
+                                </li>
+                            <?php endif;
+                        endif;
+
+                        for ($i = $start; $i <= $end; $i++): ?>
                             <li class="page-item <?php echo $page == $i ? 'active' : ''; ?>">
                                 <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
                             </li>
-                        <?php endfor; ?>
+                        <?php endfor;
+
+                        if ($end < $totalPages): ?>
+                            <?php if ($end < $totalPages - 1): ?>
+                                <li class="page-item disabled">
+                                    <span class="page-link">...</span>
+                                </li>
+                            <?php endif; ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $totalPages; ?>"><?php echo $totalPages; ?></a>
+                            </li>
+                        <?php endif; ?>
+
+                        <!-- Next Button -->
+                        <li class="page-item <?php echo $page >= $totalPages ? 'disabled' : ''; ?>">
+                            <a class="page-link" href="?page=<?php echo $page + 1; ?>" <?php echo $page >= $totalPages ? 'tabindex="-1" aria-disabled="true"' : ''; ?>>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             <?php endif; ?>

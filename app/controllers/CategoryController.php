@@ -1,16 +1,24 @@
 <?php
 require_once 'app/models/CategoryModel.php';
 require_once 'app/config/Database.php';
+require_once 'app/helpers/SessionHelper.php';
 
 class CategoryController {
     private $conn;
     private $categoryModel;
 
     public function __construct() {
+        // Initialize session
+        SessionHelper::init();
+        
         // Kết nối đến cơ sở dữ liệu
         $database = new Database();
         $this->conn = $database->getConnection();
         $this->categoryModel = new CategoryModel($this->conn);
+    }
+
+    private function setFlashMessage($type, $message) {
+        SessionHelper::setFlash($type, $message);
     }
 
     public function index() {
@@ -30,19 +38,23 @@ class CategoryController {
     public function add() {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $name = $_POST['name'];
-            $description = $_POST['description'];
+            $name = trim($_POST['name'] ?? '');
+            $description = trim($_POST['description'] ?? '');
 
             if (empty($name)) {
-                $errors[] = 'Tên danh mục là bắt buộc.';
+                $errors['name'] = 'Tên danh mục là bắt buộc';
             }
 
-            if (count($errors) == 0) {
-                if ($this->categoryModel->addCategory($name, $description)) {
-                    header('Location: /project1/Category/list');
-                    exit();
-                } else {
-                    $errors[] = 'Thêm danh mục không thành công.';
+            if (empty($errors)) {
+                try {
+                    if ($this->categoryModel->addCategory($name, $description)) {
+                        $this->setFlashMessage('success', 'Thêm danh mục thành công');
+                        header('Location: /project1/Category/list');
+                        exit();
+                    }
+                } catch (Exception $e) {
+                    $errors['system'] = 'Không thể thêm danh mục';
+                    error_log($e->getMessage());
                 }
             }
         }
@@ -51,20 +63,34 @@ class CategoryController {
     }
 
     public function edit($id) {
+        $errors = [];
         $category = $this->categoryModel->getCategoryById($id);
+        
         if (!$category) {
-            die('Danh mục không tồn tại');
+            $this->setFlashMessage('error', 'Danh mục không tồn tại');
+            header('Location: /project1/Category/list');
+            exit();
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $name = $_POST['name'];
-            $description = $_POST['description'];
+            $name = trim($_POST['name'] ?? '');
+            $description = trim($_POST['description'] ?? '');
 
-            if ($this->categoryModel->updateCategory($id, $name, $description)) {
-                header('Location: /project1/Category/list');
-                exit();
-            } else {
-                $errors[] = 'Cập nhật danh mục không thành công.';
+            if (empty($name)) {
+                $errors['name'] = 'Tên danh mục là bắt buộc';
+            }
+
+            if (empty($errors)) {
+                try {
+                    if ($this->categoryModel->updateCategory($id, $name, $description)) {
+                        $this->setFlashMessage('success', 'Cập nhật danh mục thành công');
+                        header('Location: /project1/Category/list');
+                        exit();
+                    }
+                } catch (Exception $e) {
+                    $errors['system'] = 'Không thể cập nhật danh mục';
+                    error_log($e->getMessage());
+                }
             }
         }
 
@@ -72,12 +98,25 @@ class CategoryController {
     }
 
     public function delete($id) {
-        if ($this->categoryModel->deleteCategory($id)) {
-            header('Location: /project1/Category/list');
-            exit();
-        } else {
-            die('Xóa danh mục không thành công');
+        try {
+            $category = $this->categoryModel->getCategoryById($id);
+            if (!$category) {
+                $response = ['success' => false, 'message' => 'Danh mục không tồn tại'];
+            } else {
+                if ($this->categoryModel->deleteCategory($id)) {
+                    $response = ['success' => true, 'message' => 'Xóa danh mục thành công'];
+                } else {
+                    $response = ['success' => false, 'message' => 'Không thể xóa danh mục'];
+                }
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            $response = ['success' => false, 'message' => 'Có lỗi xảy ra khi xóa danh mục'];
         }
+
+        // Return JSON response for AJAX request
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit();
     }
 }
-?>

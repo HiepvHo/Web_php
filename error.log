@@ -8549,3 +8549,1959 @@
 
 [12-Mar-2025 01:02:05 UTC] Database connection successful
 [12-Mar-2025 01:02:05 UTC] Application error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'my_store.cart' doesn't exist
+[12-Mar-2025 01:20:31 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:20:31 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:20:31 UTC] Attempting database connection with:
+[12-Mar-2025 01:20:31 UTC] Host: localhost
+[12-Mar-2025 01:20:31 UTC] Database: my_store
+[12-Mar-2025 01:20:31 UTC] Username: root
+[12-Mar-2025 01:20:31 UTC] Product count: 5
+[12-Mar-2025 01:20:31 UTC] Category count: 4
+[12-Mar-2025 01:20:31 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:20:31 UTC] Database connection successful
+[12-Mar-2025 01:20:31 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:20:31 UTC] PHP Warning:  require_once(app/views/header.php): Failed to open stream: No such file or directory in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:20:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'app/views/header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\project1\app\views\cart\view.php:1
+Stack trace:
+#0 C:\laragon\www\project1\app\controllers\CartController.php(41): include()
+#1 C:\laragon\www\project1\index.php(64): CartController->viewCart()
+#2 {main}
+  thrown in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:20:39 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:20:39 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:20:39 UTC] Attempting database connection with:
+[12-Mar-2025 01:20:39 UTC] Host: localhost
+[12-Mar-2025 01:20:39 UTC] Database: my_store
+[12-Mar-2025 01:20:39 UTC] Username: root
+[12-Mar-2025 01:20:39 UTC] Product count: 5
+[12-Mar-2025 01:20:39 UTC] Category count: 4
+[12-Mar-2025 01:20:39 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:20:39 UTC] Database connection successful
+[12-Mar-2025 01:20:39 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:20:39 UTC] PHP Warning:  require_once(app/views/header.php): Failed to open stream: No such file or directory in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:20:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'app/views/header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\project1\app\views\cart\view.php:1
+Stack trace:
+#0 C:\laragon\www\project1\app\controllers\CartController.php(41): include()
+#1 C:\laragon\www\project1\index.php(64): CartController->viewCart()
+#2 {main}
+  thrown in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:21:53 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:21:53 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:21:53 UTC] Attempting database connection with:
+[12-Mar-2025 01:21:53 UTC] Host: localhost
+[12-Mar-2025 01:21:53 UTC] Database: my_store
+[12-Mar-2025 01:21:53 UTC] Username: root
+[12-Mar-2025 01:21:53 UTC] Product count: 5
+[12-Mar-2025 01:21:53 UTC] Category count: 4
+[12-Mar-2025 01:21:53 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:21:53 UTC] Database connection successful
+[12-Mar-2025 01:21:53 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:21:53 UTC] PHP Warning:  require_once(app/views/header.php): Failed to open stream: No such file or directory in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:21:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'app/views/header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\project1\app\views\cart\view.php:1
+Stack trace:
+#0 C:\laragon\www\project1\app\controllers\CartController.php(41): include()
+#1 C:\laragon\www\project1\index.php(64): CartController->viewCart()
+#2 {main}
+  thrown in C:\laragon\www\project1\app\views\cart\view.php on line 1
+[12-Mar-2025 01:38:07 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:38:07 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:38:07 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:07 UTC] Host: localhost
+[12-Mar-2025 01:38:07 UTC] Database: my_store
+[12-Mar-2025 01:38:07 UTC] Username: root
+[12-Mar-2025 01:38:07 UTC] Product count: 5
+[12-Mar-2025 01:38:07 UTC] Category count: 4
+[12-Mar-2025 01:38:07 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:07 UTC] Database connection successful
+[12-Mar-2025 01:38:07 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:38:07 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 50
+[12-Mar-2025 01:38:07 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 53
+[12-Mar-2025 01:38:16 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:38:16 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:38:16 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:16 UTC] Host: localhost
+[12-Mar-2025 01:38:16 UTC] Database: my_store
+[12-Mar-2025 01:38:16 UTC] Username: root
+[12-Mar-2025 01:38:16 UTC] Product count: 5
+[12-Mar-2025 01:38:16 UTC] Category count: 4
+[12-Mar-2025 01:38:16 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:16 UTC] Database connection successful
+[12-Mar-2025 01:38:16 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:17 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:38:17 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:38:17 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:17 UTC] Host: localhost
+[12-Mar-2025 01:38:17 UTC] Database: my_store
+[12-Mar-2025 01:38:17 UTC] Username: root
+[12-Mar-2025 01:38:17 UTC] Product count: 5
+[12-Mar-2025 01:38:17 UTC] Category count: 4
+[12-Mar-2025 01:38:17 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:17 UTC] Database connection successful
+[12-Mar-2025 01:38:17 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:19 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:38:19 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:38:19 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:19 UTC] Host: localhost
+[12-Mar-2025 01:38:19 UTC] Database: my_store
+[12-Mar-2025 01:38:19 UTC] Username: root
+[12-Mar-2025 01:38:19 UTC] Product count: 5
+[12-Mar-2025 01:38:19 UTC] Category count: 4
+[12-Mar-2025 01:38:19 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:19 UTC] Database connection successful
+[12-Mar-2025 01:38:19 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:20 UTC] URL parts: Array
+(
+    [0] => Order
+    [1] => list
+)
+
+[12-Mar-2025 01:38:20 UTC] Loading controller: OrderController, action: list
+[12-Mar-2025 01:38:20 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:20 UTC] Host: localhost
+[12-Mar-2025 01:38:20 UTC] Database: my_store
+[12-Mar-2025 01:38:20 UTC] Username: root
+[12-Mar-2025 01:38:20 UTC] Product count: 5
+[12-Mar-2025 01:38:20 UTC] Category count: 4
+[12-Mar-2025 01:38:20 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:20 UTC] Database connection successful
+[12-Mar-2025 01:38:20 UTC] Calling OrderController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:20 UTC] Application error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''10' OFFSET '0'' at line 6
+[12-Mar-2025 01:38:35 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:38:35 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:38:35 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:35 UTC] Host: localhost
+[12-Mar-2025 01:38:35 UTC] Database: my_store
+[12-Mar-2025 01:38:35 UTC] Username: root
+[12-Mar-2025 01:38:35 UTC] Product count: 5
+[12-Mar-2025 01:38:35 UTC] Category count: 4
+[12-Mar-2025 01:38:35 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:35 UTC] Database connection successful
+[12-Mar-2025 01:38:35 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:38 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:38:38 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:38:38 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:38 UTC] Host: localhost
+[12-Mar-2025 01:38:38 UTC] Database: my_store
+[12-Mar-2025 01:38:38 UTC] Username: root
+[12-Mar-2025 01:38:38 UTC] Product count: 5
+[12-Mar-2025 01:38:38 UTC] Category count: 4
+[12-Mar-2025 01:38:38 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:38 UTC] Database connection successful
+[12-Mar-2025 01:38:38 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:39 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:38:39 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:38:39 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:39 UTC] Host: localhost
+[12-Mar-2025 01:38:39 UTC] Database: my_store
+[12-Mar-2025 01:38:39 UTC] Username: root
+[12-Mar-2025 01:38:39 UTC] Product count: 5
+[12-Mar-2025 01:38:39 UTC] Category count: 4
+[12-Mar-2025 01:38:39 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:39 UTC] Database connection successful
+[12-Mar-2025 01:38:39 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:47 UTC] URL parts: Array
+(
+    [0] => Order
+    [1] => list
+)
+
+[12-Mar-2025 01:38:47 UTC] Loading controller: OrderController, action: list
+[12-Mar-2025 01:38:47 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:47 UTC] Host: localhost
+[12-Mar-2025 01:38:47 UTC] Database: my_store
+[12-Mar-2025 01:38:47 UTC] Username: root
+[12-Mar-2025 01:38:47 UTC] Product count: 5
+[12-Mar-2025 01:38:47 UTC] Category count: 4
+[12-Mar-2025 01:38:47 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:47 UTC] Database connection successful
+[12-Mar-2025 01:38:47 UTC] Calling OrderController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:47 UTC] Application error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''10' OFFSET '0'' at line 6
+[12-Mar-2025 01:38:53 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:38:53 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:38:53 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:53 UTC] Host: localhost
+[12-Mar-2025 01:38:53 UTC] Database: my_store
+[12-Mar-2025 01:38:53 UTC] Username: root
+[12-Mar-2025 01:38:53 UTC] Product count: 5
+[12-Mar-2025 01:38:53 UTC] Category count: 4
+[12-Mar-2025 01:38:53 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:53 UTC] Database connection successful
+[12-Mar-2025 01:38:53 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:54 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:38:54 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:38:54 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:54 UTC] Host: localhost
+[12-Mar-2025 01:38:54 UTC] Database: my_store
+[12-Mar-2025 01:38:54 UTC] Username: root
+[12-Mar-2025 01:38:54 UTC] Product count: 5
+[12-Mar-2025 01:38:54 UTC] Category count: 4
+[12-Mar-2025 01:38:54 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:54 UTC] Database connection successful
+[12-Mar-2025 01:38:54 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:57 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:38:57 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:38:57 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:57 UTC] Host: localhost
+[12-Mar-2025 01:38:57 UTC] Database: my_store
+[12-Mar-2025 01:38:57 UTC] Username: root
+[12-Mar-2025 01:38:57 UTC] Product count: 5
+[12-Mar-2025 01:38:57 UTC] Category count: 4
+[12-Mar-2025 01:38:57 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:57 UTC] Database connection successful
+[12-Mar-2025 01:38:57 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:38:59 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:38:59 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:38:59 UTC] Attempting database connection with:
+[12-Mar-2025 01:38:59 UTC] Host: localhost
+[12-Mar-2025 01:38:59 UTC] Database: my_store
+[12-Mar-2025 01:38:59 UTC] Username: root
+[12-Mar-2025 01:38:59 UTC] Product count: 5
+[12-Mar-2025 01:38:59 UTC] Category count: 4
+[12-Mar-2025 01:38:59 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:38:59 UTC] Database connection successful
+[12-Mar-2025 01:38:59 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:38:59 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 50
+[12-Mar-2025 01:38:59 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 53
+[12-Mar-2025 01:39:02 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:39:02 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:39:02 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:02 UTC] Host: localhost
+[12-Mar-2025 01:39:02 UTC] Database: my_store
+[12-Mar-2025 01:39:02 UTC] Username: root
+[12-Mar-2025 01:39:02 UTC] Product count: 5
+[12-Mar-2025 01:39:02 UTC] Category count: 4
+[12-Mar-2025 01:39:02 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:02 UTC] Database connection successful
+[12-Mar-2025 01:39:02 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:39:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 50
+[12-Mar-2025 01:39:02 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\project1\app\views\cart\view.php on line 53
+[12-Mar-2025 01:39:05 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:39:05 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:39:05 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:05 UTC] Host: localhost
+[12-Mar-2025 01:39:05 UTC] Database: my_store
+[12-Mar-2025 01:39:05 UTC] Username: root
+[12-Mar-2025 01:39:05 UTC] Product count: 5
+[12-Mar-2025 01:39:05 UTC] Category count: 4
+[12-Mar-2025 01:39:05 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:05 UTC] Database connection successful
+[12-Mar-2025 01:39:05 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:39:07 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => addToCart
+    [2] => 5
+)
+
+[12-Mar-2025 01:39:07 UTC] Loading controller: CartController, action: addToCart
+[12-Mar-2025 01:39:07 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:07 UTC] Host: localhost
+[12-Mar-2025 01:39:07 UTC] Database: my_store
+[12-Mar-2025 01:39:07 UTC] Username: root
+[12-Mar-2025 01:39:07 UTC] Product count: 5
+[12-Mar-2025 01:39:07 UTC] Category count: 4
+[12-Mar-2025 01:39:07 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:07 UTC] Database connection successful
+[12-Mar-2025 01:39:07 UTC] Calling CartController->addToCart with params: Array
+(
+    [0] => 5
+)
+
+[12-Mar-2025 01:39:07 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:39:07 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:39:07 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:07 UTC] Host: localhost
+[12-Mar-2025 01:39:07 UTC] Database: my_store
+[12-Mar-2025 01:39:07 UTC] Username: root
+[12-Mar-2025 01:39:07 UTC] Product count: 5
+[12-Mar-2025 01:39:07 UTC] Category count: 4
+[12-Mar-2025 01:39:07 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:07 UTC] Database connection successful
+[12-Mar-2025 01:39:07 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:39:09 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:39:09 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:39:09 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:09 UTC] Host: localhost
+[12-Mar-2025 01:39:09 UTC] Database: my_store
+[12-Mar-2025 01:39:09 UTC] Username: root
+[12-Mar-2025 01:39:09 UTC] Product count: 5
+[12-Mar-2025 01:39:09 UTC] Category count: 4
+[12-Mar-2025 01:39:09 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:09 UTC] Database connection successful
+[12-Mar-2025 01:39:09 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:39:12 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:39:12 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:39:12 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:12 UTC] Host: localhost
+[12-Mar-2025 01:39:12 UTC] Database: my_store
+[12-Mar-2025 01:39:12 UTC] Username: root
+[12-Mar-2025 01:39:12 UTC] Product count: 5
+[12-Mar-2025 01:39:12 UTC] Category count: 4
+[12-Mar-2025 01:39:12 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:12 UTC] Database connection successful
+[12-Mar-2025 01:39:12 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:39:33 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:39:33 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:39:33 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:33 UTC] Host: localhost
+[12-Mar-2025 01:39:33 UTC] Database: my_store
+[12-Mar-2025 01:39:33 UTC] Username: root
+[12-Mar-2025 01:39:33 UTC] Product count: 5
+[12-Mar-2025 01:39:33 UTC] Category count: 4
+[12-Mar-2025 01:39:33 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:33 UTC] Database connection successful
+[12-Mar-2025 01:39:33 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:39:33 UTC] Application error: There is no active transaction
+[12-Mar-2025 01:39:40 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:39:40 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:39:40 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:40 UTC] Host: localhost
+[12-Mar-2025 01:39:40 UTC] Database: my_store
+[12-Mar-2025 01:39:40 UTC] Username: root
+[12-Mar-2025 01:39:40 UTC] Product count: 5
+[12-Mar-2025 01:39:40 UTC] Category count: 4
+[12-Mar-2025 01:39:40 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:40 UTC] Database connection successful
+[12-Mar-2025 01:39:40 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:39:44 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:39:44 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:39:44 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:44 UTC] Host: localhost
+[12-Mar-2025 01:39:44 UTC] Database: my_store
+[12-Mar-2025 01:39:44 UTC] Username: root
+[12-Mar-2025 01:39:44 UTC] Product count: 5
+[12-Mar-2025 01:39:44 UTC] Category count: 4
+[12-Mar-2025 01:39:44 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:44 UTC] Database connection successful
+[12-Mar-2025 01:39:44 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:39:49 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:39:49 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:39:49 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:49 UTC] Host: localhost
+[12-Mar-2025 01:39:49 UTC] Database: my_store
+[12-Mar-2025 01:39:49 UTC] Username: root
+[12-Mar-2025 01:39:49 UTC] Product count: 5
+[12-Mar-2025 01:39:49 UTC] Category count: 4
+[12-Mar-2025 01:39:49 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:49 UTC] Database connection successful
+[12-Mar-2025 01:39:49 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:39:55 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:39:55 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:39:55 UTC] Attempting database connection with:
+[12-Mar-2025 01:39:55 UTC] Host: localhost
+[12-Mar-2025 01:39:55 UTC] Database: my_store
+[12-Mar-2025 01:39:55 UTC] Username: root
+[12-Mar-2025 01:39:55 UTC] Product count: 5
+[12-Mar-2025 01:39:55 UTC] Category count: 4
+[12-Mar-2025 01:39:55 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:39:55 UTC] Database connection successful
+[12-Mar-2025 01:39:55 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:39:55 UTC] Application error: There is no active transaction
+[12-Mar-2025 01:40:04 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:04 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:04 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:04 UTC] Host: localhost
+[12-Mar-2025 01:40:04 UTC] Database: my_store
+[12-Mar-2025 01:40:04 UTC] Username: root
+[12-Mar-2025 01:40:04 UTC] Product count: 5
+[12-Mar-2025 01:40:04 UTC] Category count: 4
+[12-Mar-2025 01:40:04 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:04 UTC] Database connection successful
+[12-Mar-2025 01:40:04 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:09 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:40:09 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:40:09 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:09 UTC] Host: localhost
+[12-Mar-2025 01:40:09 UTC] Database: my_store
+[12-Mar-2025 01:40:09 UTC] Username: root
+[12-Mar-2025 01:40:09 UTC] Product count: 5
+[12-Mar-2025 01:40:09 UTC] Category count: 4
+[12-Mar-2025 01:40:09 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:09 UTC] Database connection successful
+[12-Mar-2025 01:40:09 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:40:17 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:17 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:17 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:17 UTC] Host: localhost
+[12-Mar-2025 01:40:17 UTC] Database: my_store
+[12-Mar-2025 01:40:17 UTC] Username: root
+[12-Mar-2025 01:40:17 UTC] Product count: 5
+[12-Mar-2025 01:40:17 UTC] Category count: 4
+[12-Mar-2025 01:40:17 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:17 UTC] Database connection successful
+[12-Mar-2025 01:40:17 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:22 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:22 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:22 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:22 UTC] Host: localhost
+[12-Mar-2025 01:40:22 UTC] Database: my_store
+[12-Mar-2025 01:40:22 UTC] Username: root
+[12-Mar-2025 01:40:22 UTC] Product count: 5
+[12-Mar-2025 01:40:22 UTC] Category count: 4
+[12-Mar-2025 01:40:22 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:22 UTC] Database connection successful
+[12-Mar-2025 01:40:22 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:22 UTC] Application error: There is no active transaction
+[12-Mar-2025 01:40:31 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:31 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:31 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:31 UTC] Host: localhost
+[12-Mar-2025 01:40:31 UTC] Database: my_store
+[12-Mar-2025 01:40:31 UTC] Username: root
+[12-Mar-2025 01:40:31 UTC] Product count: 5
+[12-Mar-2025 01:40:31 UTC] Category count: 4
+[12-Mar-2025 01:40:31 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:31 UTC] Database connection successful
+[12-Mar-2025 01:40:31 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:33 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:33 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:33 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:33 UTC] Host: localhost
+[12-Mar-2025 01:40:33 UTC] Database: my_store
+[12-Mar-2025 01:40:33 UTC] Username: root
+[12-Mar-2025 01:40:33 UTC] Product count: 5
+[12-Mar-2025 01:40:33 UTC] Category count: 4
+[12-Mar-2025 01:40:33 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:33 UTC] Database connection successful
+[12-Mar-2025 01:40:33 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:33 UTC] Application error: There is no active transaction
+[12-Mar-2025 01:40:39 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:40:39 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:40:39 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:39 UTC] Host: localhost
+[12-Mar-2025 01:40:39 UTC] Database: my_store
+[12-Mar-2025 01:40:39 UTC] Username: root
+[12-Mar-2025 01:40:39 UTC] Product count: 5
+[12-Mar-2025 01:40:39 UTC] Category count: 4
+[12-Mar-2025 01:40:39 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:39 UTC] Database connection successful
+[12-Mar-2025 01:40:39 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:40:42 UTC] URL parts: Array
+(
+    [0] => Order
+    [1] => list
+)
+
+[12-Mar-2025 01:40:42 UTC] Loading controller: OrderController, action: list
+[12-Mar-2025 01:40:42 UTC] Attempting database connection with:
+[12-Mar-2025 01:40:42 UTC] Host: localhost
+[12-Mar-2025 01:40:42 UTC] Database: my_store
+[12-Mar-2025 01:40:42 UTC] Username: root
+[12-Mar-2025 01:40:42 UTC] Product count: 5
+[12-Mar-2025 01:40:42 UTC] Category count: 4
+[12-Mar-2025 01:40:42 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:40:42 UTC] Database connection successful
+[12-Mar-2025 01:40:42 UTC] Calling OrderController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:40:42 UTC] Application error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''10' OFFSET '0'' at line 6
+[12-Mar-2025 01:53:17 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:53:17 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:53:17 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:17 UTC] Host: localhost
+[12-Mar-2025 01:53:17 UTC] Database: my_store
+[12-Mar-2025 01:53:17 UTC] Username: root
+[12-Mar-2025 01:53:17 UTC] Product count: 5
+[12-Mar-2025 01:53:17 UTC] Category count: 4
+[12-Mar-2025 01:53:17 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:17 UTC] Database connection successful
+[12-Mar-2025 01:53:17 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:53:22 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:53:22 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:53:22 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:22 UTC] Host: localhost
+[12-Mar-2025 01:53:22 UTC] Database: my_store
+[12-Mar-2025 01:53:22 UTC] Username: root
+[12-Mar-2025 01:53:22 UTC] Product count: 5
+[12-Mar-2025 01:53:22 UTC] Category count: 4
+[12-Mar-2025 01:53:22 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:22 UTC] Database connection successful
+[12-Mar-2025 01:53:22 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:53:30 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:53:30 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:53:30 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:30 UTC] Host: localhost
+[12-Mar-2025 01:53:30 UTC] Database: my_store
+[12-Mar-2025 01:53:30 UTC] Username: root
+[12-Mar-2025 01:53:30 UTC] Product count: 5
+[12-Mar-2025 01:53:30 UTC] Category count: 4
+[12-Mar-2025 01:53:30 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:30 UTC] Database connection successful
+[12-Mar-2025 01:53:30 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:53:35 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:53:35 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:53:35 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:35 UTC] Host: localhost
+[12-Mar-2025 01:53:35 UTC] Database: my_store
+[12-Mar-2025 01:53:35 UTC] Username: root
+[12-Mar-2025 01:53:35 UTC] Product count: 5
+[12-Mar-2025 01:53:35 UTC] Category count: 4
+[12-Mar-2025 01:53:35 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:35 UTC] Database connection successful
+[12-Mar-2025 01:53:35 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:53:36 UTC] URL parts: Array
+(
+    [0] => Order
+    [1] => list
+)
+
+[12-Mar-2025 01:53:36 UTC] Loading controller: OrderController, action: list
+[12-Mar-2025 01:53:36 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:36 UTC] Host: localhost
+[12-Mar-2025 01:53:36 UTC] Database: my_store
+[12-Mar-2025 01:53:36 UTC] Username: root
+[12-Mar-2025 01:53:36 UTC] Product count: 5
+[12-Mar-2025 01:53:36 UTC] Category count: 4
+[12-Mar-2025 01:53:36 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:36 UTC] Database connection successful
+[12-Mar-2025 01:53:36 UTC] Calling OrderController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:53:40 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 01:53:40 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 01:53:40 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:40 UTC] Host: localhost
+[12-Mar-2025 01:53:40 UTC] Database: my_store
+[12-Mar-2025 01:53:40 UTC] Username: root
+[12-Mar-2025 01:53:40 UTC] Product count: 5
+[12-Mar-2025 01:53:40 UTC] Category count: 4
+[12-Mar-2025 01:53:40 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:40 UTC] Database connection successful
+[12-Mar-2025 01:53:40 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:53:44 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 01:53:44 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 01:53:44 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:44 UTC] Host: localhost
+[12-Mar-2025 01:53:44 UTC] Database: my_store
+[12-Mar-2025 01:53:44 UTC] Username: root
+[12-Mar-2025 01:53:44 UTC] Product count: 5
+[12-Mar-2025 01:53:44 UTC] Category count: 4
+[12-Mar-2025 01:53:44 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:44 UTC] Database connection successful
+[12-Mar-2025 01:53:44 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 01:53:48 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 01:53:48 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 01:53:48 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:48 UTC] Host: localhost
+[12-Mar-2025 01:53:48 UTC] Database: my_store
+[12-Mar-2025 01:53:48 UTC] Username: root
+[12-Mar-2025 01:53:48 UTC] Product count: 5
+[12-Mar-2025 01:53:48 UTC] Category count: 4
+[12-Mar-2025 01:53:48 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:48 UTC] Database connection successful
+[12-Mar-2025 01:53:48 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 01:53:50 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:53:50 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:53:50 UTC] Attempting database connection with:
+[12-Mar-2025 01:53:50 UTC] Host: localhost
+[12-Mar-2025 01:53:50 UTC] Database: my_store
+[12-Mar-2025 01:53:50 UTC] Username: root
+[12-Mar-2025 01:53:50 UTC] Product count: 5
+[12-Mar-2025 01:53:50 UTC] Category count: 4
+[12-Mar-2025 01:53:50 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:53:50 UTC] Database connection successful
+[12-Mar-2025 01:53:50 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:54:00 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:54:00 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:54:00 UTC] Attempting database connection with:
+[12-Mar-2025 01:54:00 UTC] Host: localhost
+[12-Mar-2025 01:54:00 UTC] Database: my_store
+[12-Mar-2025 01:54:00 UTC] Username: root
+[12-Mar-2025 01:54:00 UTC] Product count: 5
+[12-Mar-2025 01:54:00 UTC] Category count: 4
+[12-Mar-2025 01:54:00 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:54:00 UTC] Database connection successful
+[12-Mar-2025 01:54:00 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:54:00 UTC] Application error: There is no active transaction
+[12-Mar-2025 01:54:10 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:54:10 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:54:10 UTC] Attempting database connection with:
+[12-Mar-2025 01:54:10 UTC] Host: localhost
+[12-Mar-2025 01:54:10 UTC] Database: my_store
+[12-Mar-2025 01:54:10 UTC] Username: root
+[12-Mar-2025 01:54:10 UTC] Product count: 5
+[12-Mar-2025 01:54:10 UTC] Category count: 4
+[12-Mar-2025 01:54:10 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:54:10 UTC] Database connection successful
+[12-Mar-2025 01:54:10 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:54:43 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 01:54:43 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 01:54:43 UTC] Attempting database connection with:
+[12-Mar-2025 01:54:43 UTC] Host: localhost
+[12-Mar-2025 01:54:43 UTC] Database: my_store
+[12-Mar-2025 01:54:43 UTC] Username: root
+[12-Mar-2025 01:54:43 UTC] Product count: 5
+[12-Mar-2025 01:54:43 UTC] Category count: 4
+[12-Mar-2025 01:54:43 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 01:54:43 UTC] Database connection successful
+[12-Mar-2025 01:54:43 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 01:54:43 UTC] Application error: There is no active transaction
+[12-Mar-2025 02:05:57 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:05:57 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:05:57 UTC] Attempting database connection with:
+[12-Mar-2025 02:05:57 UTC] Host: localhost
+[12-Mar-2025 02:05:57 UTC] Database: my_store
+[12-Mar-2025 02:05:57 UTC] Username: root
+[12-Mar-2025 02:05:57 UTC] Product count: 5
+[12-Mar-2025 02:05:57 UTC] Category count: 4
+[12-Mar-2025 02:05:57 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:05:57 UTC] Database connection successful
+[12-Mar-2025 02:05:57 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:05:57 UTC] Application error: There is no active transaction
+[12-Mar-2025 02:05:59 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:05:59 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:05:59 UTC] Attempting database connection with:
+[12-Mar-2025 02:05:59 UTC] Host: localhost
+[12-Mar-2025 02:05:59 UTC] Database: my_store
+[12-Mar-2025 02:05:59 UTC] Username: root
+[12-Mar-2025 02:05:59 UTC] Product count: 5
+[12-Mar-2025 02:05:59 UTC] Category count: 4
+[12-Mar-2025 02:05:59 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:05:59 UTC] Database connection successful
+[12-Mar-2025 02:05:59 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:06:06 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:06:06 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:06:06 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:06 UTC] Host: localhost
+[12-Mar-2025 02:06:06 UTC] Database: my_store
+[12-Mar-2025 02:06:06 UTC] Username: root
+[12-Mar-2025 02:06:06 UTC] Product count: 5
+[12-Mar-2025 02:06:06 UTC] Category count: 4
+[12-Mar-2025 02:06:06 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:06 UTC] Database connection successful
+[12-Mar-2025 02:06:06 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:11 UTC] URL parts: Array
+(
+    [0] => Order
+    [1] => list
+)
+
+[12-Mar-2025 02:06:11 UTC] Loading controller: OrderController, action: list
+[12-Mar-2025 02:06:11 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:11 UTC] Host: localhost
+[12-Mar-2025 02:06:11 UTC] Database: my_store
+[12-Mar-2025 02:06:11 UTC] Username: root
+[12-Mar-2025 02:06:11 UTC] Product count: 5
+[12-Mar-2025 02:06:11 UTC] Category count: 4
+[12-Mar-2025 02:06:11 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:11 UTC] Database connection successful
+[12-Mar-2025 02:06:11 UTC] Calling OrderController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:22 UTC] URL parts: Array
+(
+    [0] => Category
+    [1] => list
+)
+
+[12-Mar-2025 02:06:22 UTC] Loading controller: CategoryController, action: list
+[12-Mar-2025 02:06:22 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:22 UTC] Host: localhost
+[12-Mar-2025 02:06:22 UTC] Database: my_store
+[12-Mar-2025 02:06:22 UTC] Username: root
+[12-Mar-2025 02:06:22 UTC] Product count: 5
+[12-Mar-2025 02:06:22 UTC] Category count: 4
+[12-Mar-2025 02:06:22 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:22 UTC] Database connection successful
+[12-Mar-2025 02:06:22 UTC] Calling CategoryController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:23 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:06:23 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:06:23 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:23 UTC] Host: localhost
+[12-Mar-2025 02:06:23 UTC] Database: my_store
+[12-Mar-2025 02:06:23 UTC] Username: root
+[12-Mar-2025 02:06:23 UTC] Product count: 5
+[12-Mar-2025 02:06:23 UTC] Category count: 4
+[12-Mar-2025 02:06:23 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:23 UTC] Database connection successful
+[12-Mar-2025 02:06:23 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:25 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 02:06:25 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 02:06:25 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:25 UTC] Host: localhost
+[12-Mar-2025 02:06:25 UTC] Database: my_store
+[12-Mar-2025 02:06:25 UTC] Username: root
+[12-Mar-2025 02:06:25 UTC] Product count: 5
+[12-Mar-2025 02:06:25 UTC] Category count: 4
+[12-Mar-2025 02:06:25 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:25 UTC] Database connection successful
+[12-Mar-2025 02:06:25 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 02:06:30 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:06:30 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:06:30 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:30 UTC] Host: localhost
+[12-Mar-2025 02:06:30 UTC] Database: my_store
+[12-Mar-2025 02:06:30 UTC] Username: root
+[12-Mar-2025 02:06:30 UTC] Product count: 5
+[12-Mar-2025 02:06:30 UTC] Category count: 4
+[12-Mar-2025 02:06:30 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:30 UTC] Database connection successful
+[12-Mar-2025 02:06:30 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:34 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => addToCart
+    [2] => 14
+)
+
+[12-Mar-2025 02:06:34 UTC] Loading controller: CartController, action: addToCart
+[12-Mar-2025 02:06:34 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:34 UTC] Host: localhost
+[12-Mar-2025 02:06:34 UTC] Database: my_store
+[12-Mar-2025 02:06:34 UTC] Username: root
+[12-Mar-2025 02:06:34 UTC] Product count: 5
+[12-Mar-2025 02:06:34 UTC] Category count: 4
+[12-Mar-2025 02:06:34 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:34 UTC] Database connection successful
+[12-Mar-2025 02:06:34 UTC] Calling CartController->addToCart with params: Array
+(
+    [0] => 14
+)
+
+[12-Mar-2025 02:06:34 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:06:34 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:06:34 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:34 UTC] Host: localhost
+[12-Mar-2025 02:06:34 UTC] Database: my_store
+[12-Mar-2025 02:06:34 UTC] Username: root
+[12-Mar-2025 02:06:34 UTC] Product count: 5
+[12-Mar-2025 02:06:34 UTC] Category count: 4
+[12-Mar-2025 02:06:34 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:34 UTC] Database connection successful
+[12-Mar-2025 02:06:34 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:06:36 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 02:06:36 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 02:06:36 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:36 UTC] Host: localhost
+[12-Mar-2025 02:06:36 UTC] Database: my_store
+[12-Mar-2025 02:06:36 UTC] Username: root
+[12-Mar-2025 02:06:36 UTC] Product count: 5
+[12-Mar-2025 02:06:36 UTC] Category count: 4
+[12-Mar-2025 02:06:36 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:36 UTC] Database connection successful
+[12-Mar-2025 02:06:36 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 02:06:38 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:06:38 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:06:38 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:38 UTC] Host: localhost
+[12-Mar-2025 02:06:38 UTC] Database: my_store
+[12-Mar-2025 02:06:38 UTC] Username: root
+[12-Mar-2025 02:06:38 UTC] Product count: 5
+[12-Mar-2025 02:06:38 UTC] Category count: 4
+[12-Mar-2025 02:06:38 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:38 UTC] Database connection successful
+[12-Mar-2025 02:06:38 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:06:45 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:06:45 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:06:45 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:45 UTC] Host: localhost
+[12-Mar-2025 02:06:45 UTC] Database: my_store
+[12-Mar-2025 02:06:45 UTC] Username: root
+[12-Mar-2025 02:06:45 UTC] Product count: 5
+[12-Mar-2025 02:06:45 UTC] Category count: 4
+[12-Mar-2025 02:06:45 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:45 UTC] Database connection successful
+[12-Mar-2025 02:06:45 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:06:45 UTC] Application error: There is no active transaction
+[12-Mar-2025 02:06:48 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:06:48 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:06:48 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:48 UTC] Host: localhost
+[12-Mar-2025 02:06:48 UTC] Database: my_store
+[12-Mar-2025 02:06:48 UTC] Username: root
+[12-Mar-2025 02:06:48 UTC] Product count: 5
+[12-Mar-2025 02:06:48 UTC] Category count: 4
+[12-Mar-2025 02:06:48 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:48 UTC] Database connection successful
+[12-Mar-2025 02:06:48 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:06:49 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 02:06:49 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 02:06:49 UTC] Attempting database connection with:
+[12-Mar-2025 02:06:49 UTC] Host: localhost
+[12-Mar-2025 02:06:49 UTC] Database: my_store
+[12-Mar-2025 02:06:49 UTC] Username: root
+[12-Mar-2025 02:06:49 UTC] Product count: 5
+[12-Mar-2025 02:06:49 UTC] Category count: 4
+[12-Mar-2025 02:06:49 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:06:49 UTC] Database connection successful
+[12-Mar-2025 02:06:49 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 02:16:04 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:16:04 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:16:04 UTC] Attempting database connection with:
+[12-Mar-2025 02:16:04 UTC] Host: localhost
+[12-Mar-2025 02:16:04 UTC] Database: my_store
+[12-Mar-2025 02:16:04 UTC] Username: root
+[12-Mar-2025 02:16:04 UTC] Product count: 5
+[12-Mar-2025 02:16:04 UTC] Category count: 4
+[12-Mar-2025 02:16:04 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:16:04 UTC] Database connection successful
+[12-Mar-2025 02:16:04 UTC] Calling ProductController->list with params: Array
+(
+)
+
+[12-Mar-2025 02:22:45 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => viewCart
+)
+
+[12-Mar-2025 02:22:45 UTC] Loading controller: CartController, action: viewCart
+[12-Mar-2025 02:22:45 UTC] Attempting database connection with:
+[12-Mar-2025 02:22:45 UTC] Host: localhost
+[12-Mar-2025 02:22:45 UTC] Database: my_store
+[12-Mar-2025 02:22:45 UTC] Username: root
+[12-Mar-2025 02:22:45 UTC] Product count: 5
+[12-Mar-2025 02:22:45 UTC] Category count: 4
+[12-Mar-2025 02:22:45 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:22:45 UTC] Database connection successful
+[12-Mar-2025 02:22:45 UTC] Calling CartController->viewCart with params: Array
+(
+)
+
+[12-Mar-2025 02:22:47 UTC] URL parts: Array
+(
+    [0] => Cart
+    [1] => checkout
+)
+
+[12-Mar-2025 02:22:47 UTC] Loading controller: CartController, action: checkout
+[12-Mar-2025 02:22:47 UTC] Attempting database connection with:
+[12-Mar-2025 02:22:47 UTC] Host: localhost
+[12-Mar-2025 02:22:47 UTC] Database: my_store
+[12-Mar-2025 02:22:47 UTC] Username: root
+[12-Mar-2025 02:22:47 UTC] Product count: 5
+[12-Mar-2025 02:22:47 UTC] Category count: 4
+[12-Mar-2025 02:22:47 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:22:47 UTC] Database connection successful
+[12-Mar-2025 02:22:47 UTC] Calling CartController->checkout with params: Array
+(
+)
+
+[12-Mar-2025 02:22:59 UTC] URL parts: Array
+(
+    [0] => Product
+    [1] => list
+)
+
+[12-Mar-2025 02:22:59 UTC] Loading controller: ProductController, action: list
+[12-Mar-2025 02:22:59 UTC] Attempting database connection with:
+[12-Mar-2025 02:22:59 UTC] Host: localhost
+[12-Mar-2025 02:22:59 UTC] Database: my_store
+[12-Mar-2025 02:22:59 UTC] Username: root
+[12-Mar-2025 02:22:59 UTC] Product count: 5
+[12-Mar-2025 02:22:59 UTC] Category count: 4
+[12-Mar-2025 02:22:59 UTC] Sample product: stdClass Object
+(
+    [id] => 5
+    [name] => Hồ Viết Hiệp
+    [description] => olllll
+    [price] => 4000.00
+    [image] => images/uploads/67cd7e909947f.jpg
+    [category_id] => 5
+    [category_name] => đồ gia công
+)
+
+[12-Mar-2025 02:22:59 UTC] Database connection successful
+[12-Mar-2025 02:22:59 UTC] Calling ProductController->list with params: Array
+(
+)
+
