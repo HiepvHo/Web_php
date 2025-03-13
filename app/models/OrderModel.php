@@ -7,44 +7,36 @@ class OrderModel {
     }
 
     public function createOrder($orderData) {
-        try {
-            $this->db->beginTransaction();
+        // Create order
+        $sql = "INSERT INTO `order` (customer_name, customer_email, customer_phone,
+                customer_address, total_amount, status)
+                VALUES (?, ?, ?, ?, ?, 'pending')";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([
+            $orderData['customer_name'],
+            $orderData['customer_email'],
+            $orderData['customer_phone'],
+            $orderData['customer_address'],
+            $orderData['total_amount']
+        ]);
 
-            // Create order
-            $sql = "INSERT INTO `order` (customer_name, customer_email, customer_phone, 
-                    customer_address, total_amount, status) 
-                    VALUES (?, ?, ?, ?, ?, 'pending')";
-            $stmt = $this->db->prepare($sql);
+        $orderId = $this->db->lastInsertId();
+
+        // Create order items
+        $sql = "INSERT INTO order_item (order_id, product_id, quantity, price)
+                VALUES (?, ?, ?, ?)";
+        $stmt = $this->db->prepare($sql);
+
+        foreach ($orderData['items'] as $item) {
             $stmt->execute([
-                $orderData['customer_name'],
-                $orderData['customer_email'],
-                $orderData['customer_phone'],
-                $orderData['customer_address'],
-                $orderData['total_amount']
+                $orderId,
+                $item['product_id'],
+                $item['quantity'],
+                $item['price']
             ]);
-
-            $orderId = $this->db->lastInsertId();
-
-            // Create order items
-            $sql = "INSERT INTO order_item (order_id, product_id, quantity, price) 
-                    VALUES (?, ?, ?, ?)";
-            $stmt = $this->db->prepare($sql);
-
-            foreach ($orderData['items'] as $item) {
-                $stmt->execute([
-                    $orderId,
-                    $item['product_id'],
-                    $item['quantity'],
-                    $item['price']
-                ]);
-            }
-
-            $this->db->commit();
-            return $orderId;
-        } catch (Exception $e) {
-            $this->db->rollBack();
-            throw $e;
         }
+
+        return $orderId;
     }
 
     public function getOrder($orderId) {

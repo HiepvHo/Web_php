@@ -103,82 +103,119 @@ class CartController {
     }
 
     public function checkout() {
-        $cartId = $this->getOrCreateCartId();
-        $cartItems = $this->cartModel->getCart($_SESSION['session_id']);
-        $total = $this->cartModel->getCartTotal($cartId);
-
-        $errors = [];
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Validate form data
-            $customerName = trim($_POST['customer_name'] ?? '');
-            $customerEmail = trim($_POST['customer_email'] ?? '');
-            $customerPhone = trim($_POST['customer_phone'] ?? '');
-            $customerAddress = trim($_POST['customer_address'] ?? '');
-
-            if (empty($customerName)) {
-                $errors['customer_name'] = 'Tên không được để trống';
-            }
-            if (empty($customerEmail) || !filter_var($customerEmail, FILTER_VALIDATE_EMAIL)) {
-                $errors['customer_email'] = 'Email không hợp lệ';
-            }
-            if (empty($customerPhone)) {
-                $errors['customer_phone'] = 'Số điện thoại không được để trống';
-            }
-            if (empty($customerAddress)) {
-                $errors['customer_address'] = 'Địa chỉ không được để trống';
-            }
-
-            if (empty($cartItems)) {
-                $errors['cart'] = 'Giỏ hàng trống';
-            }
-
+            $errors = $this->validateCheckoutForm($_POST);
+            
             if (empty($errors)) {
                 try {
                     // Start transaction
                     $this->db->beginTransaction();
 
                     // Create order
-                    require_once 'app/models/OrderModel.php';
-                    $orderModel = new OrderModel($this->db);
+                    $orderId = $this->createOrder($_POST);
 
-                    $orderData = [
-                        'customer_name' => $customerName,
-                        'customer_email' => $customerEmail,
-                        'customer_phone' => $customerPhone,
-                        'customer_address' => $customerAddress,
-                        'total_amount' => $total,
-                        'items' => array_map(function($item) {
-                            return [
-                                'product_id' => $item['product_id'],
-                                'quantity' => $item['quantity'],
-                                'price' => $item['price']
-                            ];
-                        }, $cartItems)
-                    ];
+                    // Create order details
+                    $this->createOrderDetails($orderId);
 
-                    $orderId = $orderModel->createOrder($orderData);
+                    // Clear cart
+                    unset($_SESSION['cart']);
 
-                    // Clear the cart
-                    $this->cartModel->clearCart($cartId);
-                    SessionHelper::clearCart();
-
+                    // Commit transaction
                     $this->db->commit();
 
                     // Redirect to success page
-                    $this->setFlashMessage('success', 'Đặt hàng thành công! Mã đơn hàng của bạn là: ' . $orderId);
-                    header('Location: /project1/Cart/orderSuccess/' . $orderId);
-                    exit();
+                    SessionHelper::setFlash('success', 'Đặt hàng thành công!');
+                    header('Location: /project1/Cart/success');
+                    exit;
 
                 } catch (Exception $e) {
+                    // Rollback transaction on error
                     $this->db->rollBack();
-                    $errors['system'] = 'Có lỗi xảy ra khi xử lý đơn hàng';
-                    error_log($e->getMessage());
+                    SessionHelper::setFlash('error', 'Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.');
                 }
             }
+            
+            // If there are errors, show them on the checkout page
+            $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+            $total = $this->calculateTotal($cartItems);
+            $this->view('cart/checkout', ['cartItems' => $cartItems, 'total' => $total, 'errors' => $errors]);
+        } else {
+            // Show checkout page for GET request
+            $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+            $total = $this->calculateTotal($cartItems);
+            $this->view('cart/checkout', ['cartItems' => $cartItems, 'total' => $total]);
+        }
+    }
+
+    private function createOrder($data) {
+        $sql = "INSERT INTO orders (customer_name, customer_email, customer_phone, customer_address, total_amount, created_at) 
+                VALUES (:name, :email, :phone, :address, :total, NOW())";
+        
+        $total = $this->calculateTotal($_SESSION['cart']);
+        
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([
+            ':name' => $data['customer_name'],
+            ':email' => $data['customer_email'],
+            ':phone' => $data['customer_phone'],
+            ':address' => $data['customer_address'],
+            ':total' => $total
+        ]);
+        
+        return $this->db->lastInsertId();
+    }
+
+    private function createOrderDetails($orderId) {
+        $sql = "INSERT INTO order_details (order_id, product_id, quantity, price) 
+                VALUES (:order_id, :product_id, :quantity, :price)";
+        
+        $stmt = $this->db->prepare($sql);
+        
+        foreach ($_SESSION['cart'] as $item) {
+            $stmt->execute([
+                ':order_id' => $orderId,
+                ':product_id' => $item['id'],
+                ':quantity' => $item['quantity'],
+                ':price' => $item['price']
+            ]);
+        }
+    }
+
+    private function validateCheckoutForm($data) {
+        $errors = [];
+
+        $customerName = trim($data['customer_name'] ?? '');
+        $customerEmail = trim($data['customer_email'] ?? '');
+        $customerPhone = trim($data['customer_phone'] ?? '');
+        $customerAddress = trim($data['customer_address'] ?? '');
+
+        if (empty($customerName)) {
+            $errors['customer_name'] = 'Tên không được để trống';
+        }
+        if (empty($customerEmail) || !filter_var($customerEmail, FILTER_VALIDATE_EMAIL)) {
+            $errors['customer_email'] = 'Email không hợp lệ';
+        }
+        if (empty($customerPhone)) {
+            $errors['customer_phone'] = 'Số điện thoại không được để trống';
+        }
+        if (empty($customerAddress)) {
+            $errors['customer_address'] = 'Địa chỉ không được để trống';
         }
 
-        include 'app/views/cart/checkout.php';
+        if (empty($_SESSION['cart'])) {
+            $errors['cart'] = 'Giỏ hàng trống';
+        }
+
+        return $errors;
+    }
+
+    private function calculateTotal($cartItems) {
+        $total = 0;
+        foreach ($cartItems as $item) {
+            $total += $item['price'] * $item['quantity'];
+        }
+        return $total;
     }
 
     public function orderSuccess($orderId) {
