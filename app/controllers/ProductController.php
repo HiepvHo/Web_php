@@ -1,7 +1,10 @@
 <?php
-require_once 'app/models/ProductModel.php';
-require_once 'app/models/CategoryModel.php';
-require_once 'app/config/Database.php';
+namespace App\Controllers;
+
+use App\Models\ProductModel;
+use App\Models\CategoryModel;
+use App\Config\Database;
+use Exception;
 
 class ProductController {
     private $productModel;

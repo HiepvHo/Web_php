@@ -1,4 +1,7 @@
-<?php require_once 'app/views/header.php'; ?>
+<?php
+use App\Helpers\SessionHelper;
+require_once 'app/views/header.php';
+?>
 
 <div class="container mt-4">
     <h2>Thanh toán</h2>
@@ -111,14 +114,14 @@
                         <div class="order-summary">
                             <?php foreach ($cartItems as $item): ?>
                                 <div class="d-flex justify-content-between mb-2">
-                                    <span><?php echo htmlspecialchars($item['name']); ?> × <?php echo $item['quantity']; ?></span>
-                                    <span><?php echo number_format($item['price'] * $item['quantity'], 0, ',', '.'); ?> đ</span>
+                                    <span><?php echo htmlspecialchars($item['name'] ?? ''); ?> × <?php echo $item['quantity'] ?? 0; ?></span>
+                                    <span><?php echo number_format(($item['price'] ?? 0) * ($item['quantity'] ?? 0), 0, ',', '.'); ?> đ</span>
                                 </div>
                             <?php endforeach; ?>
                             <hr>
                             <div class="d-flex justify-content-between">
                                 <strong>Tổng cộng:</strong>
-                                <strong><?php echo number_format($total, 0, ',', '.'); ?> đ</strong>
+                                <strong><?php echo number_format($total ?? 0, 0, ',', '.'); ?> đ</strong>
                             </div>
                         </div>
                     </div>

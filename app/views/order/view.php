@@ -1,4 +1,7 @@
-<?php require_once 'app/views/header.php'; ?>
+<?php
+use App\Helpers\SessionHelper;
+require_once 'app/views/header.php';
+?>
 
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -8,21 +11,15 @@
         </a>
     </div>
 
-    <?php if (isset($_SESSION['error'])): ?>
+    <?php if (SessionHelper::hasFlash('error')): ?>
         <div class="alert alert-danger">
-            <?php 
-            echo $_SESSION['error'];
-            unset($_SESSION['error']);
-            ?>
+            <?php echo SessionHelper::getFlash('error'); ?>
         </div>
     <?php endif; ?>
 
-    <?php if (isset($_SESSION['success'])): ?>
+    <?php if (SessionHelper::hasFlash('success')): ?>
         <div class="alert alert-success">
-            <?php 
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            ?>
+            <?php echo SessionHelper::getFlash('success'); ?>
         </div>
     <?php endif; ?>
 

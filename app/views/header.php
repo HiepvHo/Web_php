@@ -1,3 +1,6 @@
+<?php
+use App\Helpers\SessionHelper;
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -38,6 +41,19 @@
                             </span>
                         <?php endif; ?>
                     </a>
+                    <?php if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']): ?>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user me-1"></i><?php echo htmlspecialchars($_SESSION['username']); ?>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/project1/Auth/logout">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    <?php else: ?>
+                        <a href="/project1/Auth/login" class="btn btn-outline-primary me-2">Đăng nhập</a>
+                        <a href="/project1/Auth/register" class="btn btn-primary">Đăng ký</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

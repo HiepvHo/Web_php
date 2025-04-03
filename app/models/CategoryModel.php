@@ -1,4 +1,8 @@
 <?php
+namespace App\Models;
+
+use PDO;
+
 class CategoryModel {
     private $conn;
     private $table_name = "category";

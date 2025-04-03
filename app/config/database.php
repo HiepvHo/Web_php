@@ -1,4 +1,10 @@
 <?php
+namespace App\Config;
+
+use PDO;
+use PDOException;
+use Exception;
+
 class Database {
     private $host = "localhost";
     private $db_name = "my_store";

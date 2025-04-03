@@ -1,7 +1,10 @@
 <?php
-require_once 'app/models/CategoryModel.php';
-require_once 'app/config/Database.php';
-require_once 'app/helpers/SessionHelper.php';
+namespace App\Controllers;
+
+use App\Models\CategoryModel;
+use App\Config\Database;
+use App\Helpers\SessionHelper;
+use Exception;
 
 class CategoryController {
     private $conn;

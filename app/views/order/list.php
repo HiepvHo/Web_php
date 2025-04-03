@@ -1,4 +1,7 @@
-<?php require_once 'app/views/header.php'; ?>
+<?php
+use App\Helpers\SessionHelper;
+require_once 'app/views/header.php';
+?>
 
 <div class="container mt-4">
     <h2>Quản lý đơn hàng</h2>

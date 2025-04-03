@@ -1,4 +1,7 @@
-<?php require_once 'app/views/header.php'; ?>
+<?php
+use App\Helpers\SessionHelper;
+require_once 'app/views/header.php';
+?>
 
 <div class="container mt-4">
     <h2>Giỏ hàng</h2>
@@ -26,7 +29,7 @@
                     <small class="text-muted">Sản phẩm trong giỏ</small>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="mb-0"><?php echo number_format($total, 0, ',', '.'); ?> đ</h5>
+                    <h5 class="mb-0"><?php echo number_format($total ?? 0, 0, ',', '.'); ?> đ</h5>
                     <small class="text-muted">Tổng tiền</small>
                 </div>
                 <div class="col-md-4">
@@ -64,10 +67,10 @@
                                             alt="<?php echo htmlspecialchars($item['name']); ?>" 
                                             class="img-thumbnail mr-3" style="width: 50px; height: 50px; object-fit: cover;">
                                     <?php endif; ?>
-                                    <span><?php echo htmlspecialchars($item['name']); ?></span>
+                                    <span><?php echo htmlspecialchars($item['name'] ?? ''); ?></span>
                                 </div>
                             </td>
-                            <td><?php echo number_format($item['price'], 0, ',', '.'); ?> đ</td>
+                            <td><?php echo number_format($item['price'] ?? 0, 0, ',', '.'); ?> đ</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <form action="/project1/Cart/updateQuantity" method="post" class="quantity-form d-flex align-items-center gap-2">
@@ -86,7 +89,7 @@
                                     </form>
                                 </div>
                             </td>
-                            <td><?php echo number_format($item['price'] * $item['quantity'], 0, ',', '.'); ?> đ</td>
+                            <td><?php echo number_format(($item['price'] ?? 0) * ($item['quantity'] ?? 0), 0, ',', '.'); ?> đ</td>
                             <td>
                                 <button type="button" class="btn btn-danger btn-sm"
                                         onclick="confirmRemoveItem('<?php echo $item['cart_item_id']; ?>', '<?php echo htmlspecialchars($item['name']); ?>')">
@@ -99,7 +102,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="3" class="text-right"><strong>Tổng cộng:</strong></td>
-                        <td><strong><?php echo number_format($total, 0, ',', '.'); ?> đ</strong></td>
+                        <td><strong><?php echo number_format($total ?? 0, 0, ',', '.'); ?> đ</strong></td>
                         <td></td>
                     </tr>
                 </tfoot>

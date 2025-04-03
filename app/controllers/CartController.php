@@ -1,8 +1,13 @@
 <?php
-require_once 'app/models/CartModel.php';
-require_once 'app/models/ProductModel.php';
-require_once 'app/config/Database.php';
-require_once 'app/helpers/SessionHelper.php';
+namespace App\Controllers;
+
+use App\Models\CartModel;
+use App\Models\ProductModel;
+use App\Models\OrderModel;
+use App\Config\Database;
+use App\Helpers\SessionHelper;
+use PDO;
+use Exception;
 
 class CartController {
     private $cartModel;
@@ -103,6 +108,18 @@ class CartController {
     }
 
     public function checkout() {
+        // Initialize cart data
+        $cartId = $this->getOrCreateCartId();
+        $cartItems = $this->cartModel->getCart($_SESSION['session_id']);
+        $total = $this->cartModel->getCartTotal($cartId);
+        
+        // If cart is empty, redirect to cart view
+        if (empty($cartItems)) {
+            SessionHelper::setFlash('error', 'Giỏ hàng trống');
+            header('Location: /project1/Cart/viewCart');
+            exit();
+        }
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Validate form data
             $errors = $this->validateCheckoutForm($_POST);
@@ -118,41 +135,34 @@ class CartController {
                     // Create order details
                     $this->createOrderDetails($orderId);
 
-                    // Clear cart
-                    unset($_SESSION['cart']);
-
                     // Commit transaction
                     $this->db->commit();
 
-                    // Redirect to success page
+                    // Redirect to success page with order ID
                     SessionHelper::setFlash('success', 'Đặt hàng thành công!');
-                    header('Location: /project1/Cart/success');
-                    exit;
+                    header('Location: /project1/Cart/orderSuccess/' . $orderId);
+                    exit();
 
                 } catch (Exception $e) {
                     // Rollback transaction on error
                     $this->db->rollBack();
+                    error_log("Checkout error: " . $e->getMessage());
                     SessionHelper::setFlash('error', 'Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.');
+                    $errors['checkout'] = 'Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.';
                 }
             }
-            
-            // If there are errors, show them on the checkout page
-            $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
-            $total = $this->calculateTotal($cartItems);
-            $this->view('cart/checkout', ['cartItems' => $cartItems, 'total' => $total, 'errors' => $errors]);
-        } else {
-            // Show checkout page for GET request
-            $cartItems = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
-            $total = $this->calculateTotal($cartItems);
-            $this->view('cart/checkout', ['cartItems' => $cartItems, 'total' => $total]);
         }
+        
+        // Show checkout page
+        include 'app/views/cart/checkout.php';
     }
 
     private function createOrder($data) {
-        $sql = "INSERT INTO orders (customer_name, customer_email, customer_phone, customer_address, total_amount, created_at) 
-                VALUES (:name, :email, :phone, :address, :total, NOW())";
+        $sql = "INSERT INTO `order` (customer_name, customer_email, customer_phone, customer_address, total_amount, status)
+                VALUES (:name, :email, :phone, :address, :total, 'pending')";
         
-        $total = $this->calculateTotal($_SESSION['cart']);
+        $cartId = $this->getOrCreateCartId();
+        $total = $this->cartModel->getCartTotal($cartId);
         
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
@@ -167,19 +177,26 @@ class CartController {
     }
 
     private function createOrderDetails($orderId) {
-        $sql = "INSERT INTO order_details (order_id, product_id, quantity, price) 
+        $cartId = $this->getOrCreateCartId();
+        $cartItems = $this->cartModel->getCart($_SESSION['session_id']);
+        
+        $sql = "INSERT INTO order_item (order_id, product_id, quantity, price)
                 VALUES (:order_id, :product_id, :quantity, :price)";
         
         $stmt = $this->db->prepare($sql);
         
-        foreach ($_SESSION['cart'] as $item) {
+        foreach ($cartItems as $item) {
             $stmt->execute([
                 ':order_id' => $orderId,
-                ':product_id' => $item['id'],
-                ':quantity' => $item['quantity'],
-                ':price' => $item['price']
+                ':product_id' => $item->product_id,
+                ':quantity' => $item->quantity,
+                ':price' => $item->price
             ]);
         }
+        
+        // Clear the cart after successful order creation
+        $this->cartModel->clearCart($cartId);
+        SessionHelper::updateCartCount(0);
     }
 
     private function validateCheckoutForm($data) {
@@ -219,7 +236,6 @@ class CartController {
     }
 
     public function orderSuccess($orderId) {
-        require_once 'app/models/OrderModel.php';
         $orderModel = new OrderModel($this->db);
         $order = $orderModel->getOrder($orderId);
         

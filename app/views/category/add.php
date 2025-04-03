@@ -1,4 +1,7 @@
-<?php require_once 'app/views/header.php'; ?>
+<?php
+use App\Helpers\SessionHelper;
+require_once 'app/views/header.php';
+?>
     <div class="container">
         <!-- Header -->
         <div class="header fade-in">
